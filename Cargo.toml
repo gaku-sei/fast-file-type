@@ -1,0 +1,17 @@
+[package]
+edition = "2018"
+exclude = ["index.node"]
+license = "ISC"
+name = "fast-file-type"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+tree_magic_mini = "3.0.2"
+
+[dependencies.neon]
+default-features = false
+features = ["napi-6"]
+version = "0.9"

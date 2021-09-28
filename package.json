@@ -1,0 +1,25 @@
+{
+  "name": "fast-file-type",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "build": "cargo-cp-artifact -nc index.node -- cargo build --message-format=json-render-diagnostics",
+    "build-debug": "npm run build --",
+    "build-release": "npm run build -- --release",
+    "test": "cargo test",
+    "bench": "npm run build-release && node bench/index.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^16.10.1",
+    "cargo-cp-artifact": "^0.1",
+    "file-type": "^16.5.3",
+    "glob": "^7.2.0"
+  },
+  "dependencies": {
+    "p-lazy": "^4.0.0"
+  }
+}
